@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>سحب الأرباح</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: center;
+            background: #f4f4f4;
+            padding-top: 40px;
+        }
+
+        button {
+            padding: 10px 25px;
+            font-size: 18px;
+            cursor: pointer;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .form-box {
+            display: none;
+            margin-top: 20px;
+            background: white;
+            padding: 20px;
+            width: 320px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .alert {
+            background: #fff3cd;
+            color: #856404;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 95%;
+            padding: 8px;
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>قائمة الأرباح</h2>
+
+    <button onclick="showForm()">سحب أرباحك</button>
+
+    <div class="form-box" id="withdrawForm">
+
+        <div class="alert">
+            أرباحك <strong>31,000</strong> جنيه  
+            <br>
+            يجب دفع الرسوم <strong>3,900</strong> جنيه  
+            لاستلام أرباحك
+        </div>
+
+        <input type="text" placeholder="ادخل اسمك" required>
+        <input type="tel" placeholder="ادخل رقمك" required>
+
+        <label>ارفع اسكرين إثبات الدفع</label>
+        <input type="file" accept="image/*">
+
+        <br><br>
+        <button>إرسال الطلب</button>
+    </div>
+
+    <script>
+        function showForm() {
+            document.getElementById("withdrawForm").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
